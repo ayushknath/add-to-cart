@@ -23,7 +23,7 @@ const addToCartButton = addToCartSection.querySelector(
 );
 
 const checkboxes = Array.from(
-  document.querySelectorAll('input[type="checkbox"]')
+  document.querySelectorAll("[data-checkboxMimic]")
 );
 const colorsGrp = document.querySelector(".product-color > :nth-child(2)");
 let colorVariant = "Yellow";
@@ -64,16 +64,14 @@ thumbnails.forEach((thumbnail) => {
 
 // Logic to select one color variant checkbox at a time
 checkboxes.forEach((checkbox) => {
-  checkbox.addEventListener("change", (e) => {
-    if (e.target.checked) {
-      Array.from(colorsGrp.children).forEach((input) => {
-        input.checked = false;
+  checkbox.addEventListener("click", (e) => {
+    if (!e.target.classList.contains("checked")) {
+      Array.from(colorsGrp.children).forEach((child) => {
+        child.classList.remove("checked");
       });
 
-      e.target.checked = true;
-      colorVariant = e.target.value;
-    } else {
-      colorVariant = null;
+      e.target.classList.add("checked");
+      colorVariant = e.target.dataset.value;
     }
   });
 });
@@ -121,22 +119,15 @@ decreaseButton.addEventListener("click", () => {
 // Add to cart message
 addToCartButton.addEventListener("click", () => {
   const div = document.createElement("div");
-  div.classList.add("message");
   const span = document.createElement("span");
-  const text = colorVariant
-    ? `${productTitle.textContent} with Color ${colorVariant} and Size ${size} added to cart`
-    : "Please choose a color";
+  const text = `${productTitle.textContent} with Color ${colorVariant} and Size ${size} added to cart`;
   const textNode = document.createTextNode(text);
   span.appendChild(textNode);
   div.appendChild(span);
-  colorVariant
-    ? div.classList.add("addtocart-message")
-    : div.classList.add("error-message");
+  div.classList.add("message", "addtocart-message");
   addToCartSection.appendChild(div);
 
   setTimeout(() => {
     div.remove();
-    div.classList.contains("error-message") &&
-      div.classList.remove("error-message");
   }, 3000);
 });

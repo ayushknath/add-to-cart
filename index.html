@@ -19,7 +19,7 @@
             </div>
 
             <ul class="thumbnails" data-thumbnails>
-                <li><img src="assets/images/pic-1.jpg" alt="" /></li>
+                <li class="selected-image"><img src="assets/images/pic-1.jpg" alt="" /></li>
                 <li><img src="assets/images/pic-2.jpg" alt="" /></li>
                 <li><img src="assets/images/pic-3.jpg" alt="" /></li>
                 <li><img src="assets/images/pic-4.jpg" alt="" /></li>
@@ -44,29 +44,29 @@
             <section class="product-color">
                 <p class="option-labels">Choose a Color</p>
                 <div>
-                    <input type="checkbox" name="productColor" value="Yellow" id="product-yellow" checked /><label for="product-yellow" class="sr-only">Yellow</label>
-                    <input type="checkbox" name="productColor" value="Green" id="product-green" /><label for="product-green" class="sr-only">Green</label>
-                    <input type="checkbox" name="productColor" value="Blue" id="product-blue" /><label for="product-blue" class="sr-only">Blue</label>
-                    <input type="checkbox" name="productColor" value="Pink" id="product-pink" /><label for="product-pink" class="sr-only">Pink</label>
+                    <span class="checkbox-mimic yellow checked" role="checkbox" data-checkboxMimic data-value="Yellow"></span>
+                    <span class="checkbox-mimic green" role="checkbox" data-checkboxMimic data-value="Green"></span>
+                    <span class="checkbox-mimic blue" role="checkbox" data-checkboxMimic data-value="Blue"></span>
+                    <span class="checkbox-mimic pink" role="checkbox" data-checkboxMimic data-value="Pink"></span>
                 </div>
             </section>
 
             <section class="product-size">
                 <p class="option-labels">Choose a Size</p>
                 <div>
-                    <div class="form-control-group">
+                    <div class="size-control-group selected-size">
                         <input type="radio" name="productSize" id="product-small" value="Small" checked /><label for="product-small">Small</label>
                     </div>
-                    <div class="form-control-group">
+                    <div class="size-control-group">
                         <input type="radio" name="productSize" id="product-medium" value="Medium" /><label for="product-medium">Medium</label>
                     </div>
-                    <div class="form-control-group">
+                    <div class="size-control-group">
                         <input type="radio" name="productSize" id="product-large" value="Large" /><label for="product-large">Large</label>
                     </div>
-                    <div class="form-control-group">
+                    <div class="size-control-group">
                         <input type="radio" name="productSize" id="product-extra-large" value="Extra large" /><label for="product-extra-large">Extra Large</label>
                     </div>
-                    <div class="form-control-group">
+                    <div class="size-control-group">
                         <input type="radio" name="productSize" id="product-xxl" value="XXL" /><label for="product-xxl">XXL</label>
                     </div>
                 </div>

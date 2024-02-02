@@ -148,11 +148,60 @@ button {
   border-bottom: 1px solid var(--color-lightGrey);
 }
 
-/* Product color (Attempt later) */
-.product-color input[type="checkbox"] {
+/* Product color */
+.checkbox-mimic {
+  display: inline-block;
   width: 50px;
   height: 50px;
-  margin-right: 0.75rem;
+  outline: 3px solid transparent;
+  outline-offset: 2px;
+}
+
+.checkbox-mimic.yellow {
+  background: var(--color-yellow);
+}
+.checkbox-mimic.yellow.checked {
+  outline-color: var(--color-yellow);
+  background-image: url("assets/images/checkmark.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.checkbox-mimic.green {
+  background: var(--color-green);
+}
+.checkbox-mimic.green.checked {
+  outline-color: var(--color-green);
+  background-image: url("assets/images/checkmark.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.checkbox-mimic.blue {
+  background: var(--color-blue);
+}
+.checkbox-mimic.blue.checked {
+  outline-color: var(--color-blue);
+  background-image: url("assets/images/checkmark.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.checkbox-mimic.pink {
+  background: var(--color-pink);
+}
+.checkbox-mimic.pink.checked {
+  outline-color: var(--color-pink);
+  background-image: url("assets/images/checkmark.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.product-color > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 .product-color {
@@ -169,7 +218,7 @@ button {
   gap: 0.625rem;
 }
 
-.form-control-group {
+.size-control-group {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -178,20 +227,21 @@ button {
   background-color: #f3f3f3;
 }
 
-.form-control-group.selected-size {
+.size-control-group.selected-size {
   background-color: var(--color-lightBlue);
 }
 
-.form-control-group.selected-size label {
+.size-control-group.selected-size label {
   color: var(--color-purple);
 }
 
-.form-control-group input[type="radio"] {
+.size-control-group input[type="radio"] {
   width: 1rem;
   height: 1rem;
+  accent-color: var(--color-purple);
 }
 
-.form-control-group label {
+.size-control-group label {
   font-weight: 500;
   color: var(--color-darkGrey);
 }
@@ -219,6 +269,7 @@ button {
 .product-quantity button {
   font-size: 1.25rem;
   font-weight: bold;
+  color: #a3a3a3;
 }
 
 .product-quantity button:hover {
@@ -265,11 +316,6 @@ button {
 /* Add to cart message */
 .addtocart-message {
   background-color: #e7f8b7;
-}
-
-/* Error message */
-.error-message {
-  background-color: var(--color-red);
 }
 
 /* Product description */
