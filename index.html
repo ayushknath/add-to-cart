@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <!-- REPLACE THIS WITH YOUR PROJECT NAME. EXAMPLE - Category tabs -->
+    <title>Add To Cart</title>
+
+</head>
+
+<body>
+    <!-- Your code goes here -->
+    <div class="container">
+        <section class="product-preview">
+            <div class="current-image" data-currentImage>
+                <img src="assets/images/pic-1.jpg" alt="" data-currentImage />
+            </div>
+
+            <ul class="thumbnails" data-thumbnails>
+                <li><img src="assets/images/pic-1.jpg" alt="" /></li>
+                <li><img src="assets/images/pic-2.jpg" alt="" /></li>
+                <li><img src="assets/images/pic-3.jpg" alt="" /></li>
+                <li><img src="assets/images/pic-4.jpg" alt="" /></li>
+            </ul>
+        </section>
+
+        <section class="product-details">
+            <header>
+                <p data-productVendor></p>
+                <h1 data-productTitle></h1>
+            </header>
+
+            <section class="product-pricing">
+                <div class="product-pricing__discount">
+                    <span class="discounted-price" data-price></span>
+                    <span class="discount-amount" data-discount></span>
+                </div>
+
+                <p class="product-pricing__original" data-compareAtPrice></p>
+            </section>
+
+            <section class="product-color">
+                <p class="option-labels">Choose a Color</p>
+                <div>
+                    <input type="checkbox" name="productColor" value="Yellow" id="product-yellow" checked /><label for="product-yellow" class="sr-only">Yellow</label>
+                    <input type="checkbox" name="productColor" value="Green" id="product-green" /><label for="product-green" class="sr-only">Green</label>
+                    <input type="checkbox" name="productColor" value="Blue" id="product-blue" /><label for="product-blue" class="sr-only">Blue</label>
+                    <input type="checkbox" name="productColor" value="Pink" id="product-pink" /><label for="product-pink" class="sr-only">Pink</label>
+                </div>
+            </section>
+
+            <section class="product-size">
+                <p class="option-labels">Choose a Size</p>
+                <div>
+                    <div class="form-control-group">
+                        <input type="radio" name="productSize" id="product-small" value="Small" checked /><label for="product-small">Small</label>
+                    </div>
+                    <div class="form-control-group">
+                        <input type="radio" name="productSize" id="product-medium" value="Medium" /><label for="product-medium">Medium</label>
+                    </div>
+                    <div class="form-control-group">
+                        <input type="radio" name="productSize" id="product-large" value="Large" /><label for="product-large">Large</label>
+                    </div>
+                    <div class="form-control-group">
+                        <input type="radio" name="productSize" id="product-extra-large" value="Extra large" /><label for="product-extra-large">Extra Large</label>
+                    </div>
+                    <div class="form-control-group">
+                        <input type="radio" name="productSize" id="product-xxl" value="XXL" /><label for="product-xxl">XXL</label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="product-addtocart" data-addToCart>
+                <div>
+                    <div class="product-quantity">
+                        <button data-decreaseQuantity>-</button>
+                        <p data-productQuantity>1</p>
+                        <button data-increaseQuantity>+</button>
+                    </div>
+
+                    <button data-addToCartAction><img src="assets/images/shopping-bag.svg" alt="Shopping bag icon" />Add To Cart</button>
+                </div>
+            </section>
+
+            <article class="product-description" data-productDescription></article>
+        </section>
+    </div>
+    <!-- Happy coding 😊 -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
